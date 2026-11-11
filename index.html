@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTFOLIO | Turquoise</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #effcfa;
+    color: #245b59;
+}
+
+header {
+    background: linear-gradient(135deg, #168f89, #54c8bd);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    color: #168f89;
+    font-size: 27px;
+}
+
+.welcome p {
+    color: #648986;
+    margin-top: 8px;
+}
+
+.students {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.student-card {
+    background: white;
+    border-radius: 22px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(22,143,137,0.12);
+    border: 1px solid #d1f1ec;
+}
+
+.student-card img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #b9eee5;
+    margin-bottom: 15px;
+}
+
+.student-card h3 {
+    color: #168f89;
+    font-size: 21px;
+}
+
+.student-card p {
+    color: #648986;
+    margin: 8px 0 18px;
+}
+
+button {
+    background: #168f89;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0b6965;
+    transform: translateY(-2px);
+}
+
+.portfolio {
+    display: none;
+    background: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(22,143,137,0.10);
+}
+
+.portfolio.active {
+    display: block;
+}
+
+.back {
+    margin-bottom: 25px;
+    background: #6bbdb4;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+    background: #e8f9f5;
+    border-radius: 18px;
+}
+
+.profile img {
+    width: 170px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px #c1e9e2;
+}
+
+.profile h2 {
+    color: #168f89;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.profile p {
+    color: #648986;
+    margin-top: 5px;
+}
+
+.info-section {
+    margin-top: 30px;
+}
+
+.info-section h3 {
+    color: #168f89;
+    border-left: 5px solid #54c8bd;
+    padding-left: 12px;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.info-box {
+    background: #f0fbf8;
+    padding: 18px;
+    border-radius: 12px;
+    line-height: 2;
+}
+
+.info-box strong {
+    color: #168f89;
+}
+
+.certificate {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f0fbf8;
+    border-radius: 15px;
+}
+
+.certificate img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 8px;
+    border: 4px solid white;
+    box-shadow: 0 3px 12px #c8e9e3;
+}
+
+.certificate p {
+    margin-top: 10px;
+    color: #168f89;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #168f89;
+    color: white;
+    font-size: 14px;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .portfolio {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MY PORTFOLIO</h1>
+    <p>แฟ้มสะสมผลงานเพื่อการศึกษาต่อ</p>
+    <p>มหาวิทยาลัยราชภัฏสุราษฎร์ธานี</p>
+</header>
+
+<main class="container">
+
+<div id="home">
+    <div class="welcome">
+        <h2>WELCOME TO MY PORTFOLIO</h2>
+        <p>เลือกชมแฟ้มสะสมผลงานของนักเรียน</p>
+    </div>
+
+    <div class="students">
+
+        <div class="student-card">
+            <img src="profile1.jpeg" alt="รูปโปรไฟล์วรัญญา">
+            <h3>วรัญญา ไกรนรา</h3>
+            <p>สาขาบริหารธุรกิจ<br>วิชาเอกการเป็นผู้ประกอบการ</p>
+            <button onclick="showPortfolio('person1')">
+                เข้าชมผลงาน
+            </button>
+        </div>
+
+        <div class="student-card">
+            <img src="profile2.jpeg" alt="รูปโปรไฟล์ภันทิลา">
+            <h3>ภันทิลา มัฎฐารักษ์</h3>
+            <p>คณะนิติศาสตร์</p>
+            <button onclick="showPortfolio('person2')">
+                เข้าชมผลงาน
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- PORTFOLIO PERSON 1 -->
+
+<section class="portfolio" id="person1">
+
+<button class="back" onclick="goHome()">← กลับหน้าหลัก</button>
+
+<div class="profile">
+    <img src="profile1.jpeg" alt="วรัญญา ไกรนรา">
+    <h2>นางสาววรัญญา ไกรนรา</h2>
+    <p>แฟ้มสะสมผลงาน (PORTFOLIO)</p>
+</div>
+
+<div class="info-section">
+    <h3>01 ประวัติส่วนตัว</h3>
+    <div class="info-box">
+        <strong>ชื่อ-นามสกุล:</strong> นางสาววรัญญา ไกรนรา<br>
+        <strong>ระดับการศึกษา:</strong> ชั้นมัธยมศึกษาปีที่ 6<br>
+        <strong>แผนการเรียน:</strong> ศิลป์-คำนวณ<br>
+        <strong>โรงเรียน:</strong> ทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>02 ประวัติการศึกษาและเป้าหมาย</h3>
+    <div class="info-box">
+        มีความมุ่งมั่นที่จะศึกษาต่อในระดับอุดมศึกษา<br>
+        <strong>มหาวิทยาลัย:</strong> มหาวิทยาลัยราชภัฏสุราษฎร์ธานี<br>
+        <strong>คณะ:</strong> วิทยาการจัดการ<br>
+        <strong>สาขา:</strong> บริหารธุรกิจ<br>
+        <strong>วิชาเอก:</strong> การเป็นผู้ประกอบการ
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>03 กิจกรรมที่เข้าร่วม</h3>
+    <div class="info-box">
+        เข้าร่วมการแข่งขันตอบปัญหาแนะแนว ระดับชั้นมัธยมศึกษาปีที่ 4–6
+        และได้รับรางวัล <strong>เหรียญเงิน</strong>
+        กิจกรรมดังกล่าวช่วยฝึกทักษะการคิด วิเคราะห์ การแก้ไขปัญหา
+        และการแสวงหาความรู้
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>04 อาชีพในฝัน</h3>
+    <div class="info-box">
+        <strong>เจ้าของคาเฟ่</strong><br>
+        มีความใฝ่ฝันที่จะเปิดคาเฟ่เป็นของตนเอง
+        ต้องการนำความรู้ด้านธุรกิจและการเป็นผู้ประกอบการ
+        มาพัฒนาร้านให้มีเอกลักษณ์และสามารถดำเนินธุรกิจได้อย่างยั่งยืน
+    </div>
+</div>
+
+<div class="info-section" id="awards1">
+    <h3>05 เกียรติบัตรและความภาคภูมิใจ</h3>
+    <div class="certificate">
+        <img src="certificate1.jpeg" alt="เกียรติบัตรวรัญญา">
+        <p>เกียรติบัตรการแข่งขันตอบปัญหาแนะแนว ระดับมัธยมศึกษาปีที่ 4–6</p>
+    </div>
+</div>
+
+</section>
+
+<!-- PORTFOLIO PERSON 2 -->
+
+<section class="portfolio" id="person2">
+
+<button class="back" onclick="goHome()">← กลับหน้าหลัก</button>
+
+<div class="profile">
+    <img src="profile2.jpeg" alt="ภันทิลา มัฎฐารักษ์">
+    <h2>นางสาวภันทิลา มัฎฐารักษ์</h2>
+    <p>แฟ้มสะสมผลงาน (PORTFOLIO)</p>
+</div>
+
+<div class="info-section">
+    <h3>01 ประวัติส่วนตัว</h3>
+    <div class="info-box">
+        <strong>ชื่อ-นามสกุล:</strong> นางสาวภันทิลา มัฎฐารักษ์<br>
+        <strong>ระดับการศึกษา:</strong> ชั้นมัธยมศึกษาปีที่ 6<br>
+        <strong>แผนการเรียน:</strong> ศิลป์-คำนวณ<br>
+        <strong>โรงเรียน:</strong> ทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>02 ประวัติการศึกษาและเป้าหมาย</h3>
+    <div class="info-box">
+        มีความตั้งใจที่จะศึกษาต่อในระดับอุดมศึกษา<br>
+        <strong>มหาวิทยาลัย:</strong> มหาวิทยาลัยราชภัฏสุราษฎร์ธานี<br>
+        <strong>คณะ:</strong> นิติศาสตร์
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>03 กิจกรรมและประสบการณ์</h3>
+    <div class="info-box">
+        เข้าร่วมฝึกประสบการณ์ ณ สำนักงานอัยการ จังหวัดทุ่งสง
+        ได้เรียนรู้เกี่ยวกับการทำงานในหน่วยงานด้านกฎหมาย
+        การปฏิบัติงาน และความรับผิดชอบ
+        ซึ่งช่วยสร้างความเข้าใจเกี่ยวกับวิชาชีพด้านกฎหมายมากยิ่งขึ้น
+    </div>
+</div>
+
+<div class="info-section">
+    <h3>04 อาชีพในฝัน</h3>
+    <div class="info-box">
+        <strong>อัยการ</strong><br>
+        มีความใฝ่ฝันที่จะประกอบอาชีพอัยการ
+        โดยมุ่งหวังที่จะนำความรู้ทางกฎหมายมาใช้ในการอำนวยความยุติธรรม
+        และปฏิบัติหน้าที่ด้วยความซื่อสัตย์และเป็นธรรม
+    </div>
+</div>
+
+<div class="info-section" id="awards2">
+    <h3>05 เกียรติบัตรและความภาคภูมิใจ</h3>
+    <div class="certificate">
+        <img src="certificate2.jpeg" alt="เกียรติบัตรภันทิลา">
+        <p>เกียรติบัตรประจำตัว</p>
+    </div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>PORTFOLIO | TURQUOISE THEME</p>
+    <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+</footer>
+
+<script>
+function showPortfolio(id) {
+    document.getElementById('home').style.display = 'none';
+
+    document.querySelectorAll('.portfolio').forEach(function(item) {
+        item.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function goHome() {
+    document.querySelectorAll('.portfolio').forEach(function(item) {
+        item.classList.remove('active');
+    });
+
+    document.getElementById('home').style.display = 'block';
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>
